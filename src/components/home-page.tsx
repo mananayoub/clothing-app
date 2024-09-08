@@ -34,10 +34,14 @@ export function HomePage() {
   const sizes = ['XS', 'S', 'M', 'L', 'XL']
   const colors = ['Black', 'White', 'Gray', 'Beige', 'Navy']
 
-  const fadeIn: Variants  = {
+  const fadeIn: Variants = {
     initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-  }
+    animate: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.5 } 
+    },
+  };
 
   const stagger = {
     animate: {
