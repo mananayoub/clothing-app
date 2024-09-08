@@ -2,7 +2,7 @@
 
 import { ShoppingBag, Menu, X, Instagram, Twitter, Facebook, Star, ArrowRight, ChevronDown, Heart } from 'lucide-react'
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, Variants } from 'framer-motion'
 
 export function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -34,10 +34,9 @@ export function HomePage() {
   const sizes = ['XS', 'S', 'M', 'L', 'XL']
   const colors = ['Black', 'White', 'Gray', 'Beige', 'Navy']
 
-  const fadeIn = {
+  const fadeIn: Variants  = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
   }
 
   const stagger = {
